@@ -303,7 +303,8 @@ namespace Raspberry.IO.InterIntegratedCircuit
                     return Interop.BCM2835_BSC1_BASE;
 
                 case Processor.Bcm2709:
-                    return Interop.BCM2836_BSC1_BASE;
+                case Processor.Bcm2835:                 // RJL Untested, I2C not required
+                   return Interop.BCM2836_BSC1_BASE;
                 
                 default:
                     throw new ArgumentOutOfRangeException("processor");
@@ -318,6 +319,7 @@ namespace Raspberry.IO.InterIntegratedCircuit
                     return Interop.BCM2835_GPIO_BASE;
 
                 case Processor.Bcm2709:
+                case Processor.Bcm2835:                 // RJL Untested, I2C not required
                     return Interop.BCM2836_GPIO_BASE;
 
                 default:

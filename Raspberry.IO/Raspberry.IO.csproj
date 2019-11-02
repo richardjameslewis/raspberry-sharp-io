@@ -33,6 +33,9 @@
     <DocumentationFile>bin\Release\Raspberry.IO.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Raspberry.System">
+      <HintPath>..\..\raspberry-sharp-system.git\Raspberry.System\bin\Debug\Raspberry.System.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>

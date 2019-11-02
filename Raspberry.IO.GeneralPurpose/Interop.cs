@@ -13,6 +13,8 @@ namespace Raspberry.IO.GeneralPurpose
 
         #region Constants
 
+        // RJL The base addresses below are either misnamed or confusing: the BCM2835 chip uses BCM2836_GPIO_BASE
+
         public const uint BCM2835_PERI_BASE = 0x20000000;
         public const uint BCM2835_GPIO_BASE = (BCM2835_PERI_BASE + 0x200000);
         public const uint BCM2835_BSC0_BASE = (BCM2835_PERI_BASE + 0x205000);

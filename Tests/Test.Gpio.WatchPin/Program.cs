@@ -35,10 +35,10 @@ namespace Test.Gpio.WatchPin
 
             var procPin = userPin.ToProcessor();
 
-            var driver = GpioConnectionSettings.DefaultDriver;
+            //var driver = GpioConnectionSettings.DefaultDriver;
+            var driver = new FileGpioConnectionDriver();
 
-            try
-            {
+            try {
                 driver.Allocate(procPin, PinDirection.Input);
 
                 var isHigh = driver.Read(procPin);
